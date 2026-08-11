@@ -30,6 +30,7 @@
 <button class="nav-item" data-page="interviews"><span class="nav-icon">📋</span>面试日志</button>
 <button class="nav-item" data-page="wrongbook"><span class="nav-icon">📕</span>错题集</button>
 <button class="nav-item" data-page="stats"><span class="nav-icon">📊</span>学习统计</button>
+<button class="nav-item" data-page="test"><span class="nav-icon">🧪</span>TEST测试</button>
 <button class="nav-item" data-page="pomodoro"><span class="nav-icon">⏱️</span>番茄钟</button>
 <button class="nav-item" data-page="ai-chat"><span class="nav-icon">🤖</span>AI助手</button>
 </nav>
@@ -54,6 +55,7 @@
 <div class="card"><div class="card-header"><h3>📌 今日目标</h3></div><div id="dg"></div></div>
 </div>
 </div>
+<div class="page" id="page-test" style="background:#ffeb3b;min-height:300px;border:4px solid blue"><div class="card" style="text-align:center;padding:30px"><h3>🧪测试页面</h3><p style="font-size:24px;color:blue;font-weight:bold">如果看到这段文字，说明页面渲染正常！</p></div></div>
 <div class="page" id="page-checkin">
 <div class="checkin-container">
 <div class="card checkin-main"><h3>🔥 每日打卡</h3><div class="streak-display"><span class="streak-flame" id="fi">🔥</span><div class="streak-number" id="sn">0</div><div class="streak-label">连续打卡天数</div></div><button class="checkin-btn" id="cb" onclick="C()">点击<br>打卡</button><div class="checkin-message" id="cm"></div><p style="font-size:10px;color:var(--gray-400);margin-top:6px">总打卡:<strong id="tc">0</strong>次</p></div>
@@ -1421,6 +1423,7 @@ if(n==='vocabulary'&&!VQ.w.length)Svq();
 if(n==='interviews')Ri();
 if(n==='wrongbook')Rwb();
 if(n==='stats')Rst();
+if(n==='test')Tt('🧪测试页激活','info');
 if(n==='pomodoro'){Tt('🍅正在加载番茄钟...','info');Rpo();}
 if(n==='ai-chat'){Tt('🤖正在加载AI助手...','info');if(ge('aikey'))ge('aikey').value=ST.apikey||'';Rch();}
 }
