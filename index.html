@@ -1413,7 +1413,7 @@ function S(n){
 document.querySelectorAll('.nav-item').forEach(function(e){e.classList.remove('active')});
 document.querySelectorAll('.page').forEach(function(e){e.classList.remove('active');e.style.display='none'});
 var nav=document.querySelector('[data-page="'+n+'"]');if(nav)nav.classList.add('active');
-var pg=ge('page-'+n);if(pg){pg.classList.add('active');pg.style.display='block';pg.style.opacity='1'};
+var pg=ge('page-'+n);if(pg){pg.classList.add('active');pg.style.display='block';pg.style.opacity='1';pg.style.background='#ffeb3b';pg.style.minHeight='300px';pg.style.border='4px solid red';pg.style.padding='20px'}else{Tt('错误：找不到页面元素 page-'+n,'warning')};
 if(n==='dashboard')Ud();
 if(n==='checkin')Rc();
 if(n==='courses'){Rc2();if(!CQ.q.length)Scq();}
