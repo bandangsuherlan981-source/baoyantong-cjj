@@ -1424,8 +1424,8 @@ if(n==='interviews')Ri();
 if(n==='wrongbook')Rwb();
 if(n==='stats')Rst();
 if(n==='test')Tt('🧪测试页激活','info');
-if(n==='pomodoro'){Tt('🍅正在加载番茄钟...','info');Rpo();}
-if(n==='ai-chat'){Tt('🤖正在加载AI助手...','info');if(ge('aikey'))ge('aikey').value=ST.apikey||'';Rch();}
+if(n==='pomodoro'){Tt('🍅番茄钟路由成功(跳过Rpo)','info');/*Rpo();*/}
+if(n==='ai-chat'){Tt('🤖AI助手路由成功(跳过Rch)','info');/*Rch();*/}
 }
 document.querySelectorAll('.nav-item').forEach(function(b){b.addEventListener('click',function(){S(b.dataset.page)})});
 
